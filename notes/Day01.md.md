@@ -1,5 +1,9 @@
-# Day01 环境搭建
+# Day01 AI学习笔记
 
+相关知识：
+[[Git基础]]
+
+# Day01 环境搭建
 
 ## 今日完成
 
@@ -8,7 +12,6 @@
 - 配置 Python 3.10
 - 安装 numpy pandas sklearn
 - 学习 Git 基础
-
 
 ## 我的环境
 
@@ -20,7 +23,6 @@ Python:
 Conda环境:
 
 ai-study
-
 
 ## Git学习
 
