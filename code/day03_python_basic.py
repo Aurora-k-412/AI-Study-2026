@@ -377,3 +377,117 @@ print(df[df["score"] > 90])
 
 print("只查看姓名和成绩:")
 print(df[["name", "score"]])
+
+
+# if 条件判断
+
+score = 85
+
+if score >= 90:
+    print("优秀")
+else:
+    print("继续努力")
+
+
+score = 92
+
+if score >= 90:
+    print("优秀")
+elif score >= 60:
+    print("及格")
+else:
+    print("不及格")
+
+
+name = "凯凯"
+score = 96
+
+if name == "凯凯" and score >= 90:
+    print("凯凯 成绩优秀")
+elif name == "凯凯" and 60 <= score <90:
+    print("凯凯 成绩合格")
+else:
+    print("凯凯 需要努力")
+
+
+print("-----for循环练习-----")
+
+courses = ["Python", "NumPy", "Pandas", "AI"]
+
+for course in courses:
+    print("正在学习:", course)
+
+
+print("-----次数练习-----")
+
+for i in range(1,6):
+    print("第", i, "次学习Python")
+
+
+scores = [85,92,78,96,88]
+
+def calculate_grade(score):
+    if score >= 90:
+        return "优秀"
+    elif score >= 60:
+        return "及格"
+    else:
+        return "不及格"
+
+for i in range(len(scores)):
+    print("第", i+1, "个学生成绩:", scores[i])
+    print( calculate_grade(scores[i]))
+
+
+count = 1
+
+while count <= 5:
+    print("AI学习第", count, "天")
+    count += 1
+
+
+students = [
+    {"name":"凯凯","score":95},
+    {"name":"小明","score":88},
+    {"name":"小红","score":92}
+]
+
+
+def calculate_grade(score):
+
+    if score >= 90:
+        return "优秀"
+
+    elif score >=60:
+        return "及格"
+
+    else:
+        return "不及格"
+
+
+
+total = 0
+max_score = 0
+
+
+for student in students:
+
+    name = student["name"]
+    score = student["score"]
+
+    print(name, "成绩:", score)
+    print(calculate_grade(score))
+
+    total += score
+
+    if score > max_score:
+        max_score = score
+
+
+
+average = total / len(students)
+
+
+print("----------------")
+print("平均分:", average)
+print("最高分:", max_score)
