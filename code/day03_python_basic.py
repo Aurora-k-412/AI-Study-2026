@@ -491,3 +491,4 @@ average = total / len(students)
 print("----------------")
 print("平均分:", average)
 print("最高分:", max_score)
+
