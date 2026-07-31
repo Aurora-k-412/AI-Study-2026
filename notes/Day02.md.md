@@ -40,5 +40,5 @@
 1.
 2.
 3.
-![[Pasted image 20260724091446.png|546]]![[Pasted image 20260724091508.png|531]]S
-![[Pasted image 20260724195358.png]]
+![[assets/day02/Pasted image 20260724091446.png|546]]![[assets/day02/Pasted image 20260724091508.png|531]]S
+![[assets/day03/Pasted image 20260724195358.png]]

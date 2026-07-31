@@ -82,5 +82,5 @@ pip安装scipy失败
 第一次完成：
 
 代码 + Git + 文档管理流程
-![[Pasted image 20260724004111.png]]
-![[Pasted image 20260724011905.png|613]]
+![[assets/day01/Pasted image 20260724004111.png]]
+![[assets/day01/Pasted image 20260724011905.png|613]]

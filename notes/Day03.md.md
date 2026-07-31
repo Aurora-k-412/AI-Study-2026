@@ -21,8 +21,8 @@
 - 列表
 - 字典
 - 函数
-![[Pasted image 20260724202003.png]]
-![[Pasted image 20260724202117.png]]
+![[assets/day03/Pasted image 20260724202003.png]]
+![[assets/day03/Pasted image 20260724202117.png]]
 ### 2. NumPy
 
 学习内容：
@@ -31,9 +31,9 @@
 - 数组计算
 - 矩阵
 
-![[Pasted image 20260724202836.png]]
-![[Pasted image 20260724202924.png]]
-![[Pasted image 20260724203000.png]]
+![[assets/day03/Pasted image 20260724202836.png]]
+![[assets/day03/Pasted image 20260724202924.png]]
+![[assets/day03/Pasted image 20260724203000.png]]
 ### 3. Pandas
 
 学习内容：
