@@ -13,3 +13,4 @@ print(result1)  # Output: 15
 print(result2)  # Output: 5
 print(result3)  # Output: 50
 print(result4)  # Output: 5.0
+
