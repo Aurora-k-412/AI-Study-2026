@@ -1,7 +1,15 @@
-from students import load_students
+import students
 
 
-students = load_students()
+student_list = students.input_student()
+
+
+students.show_students(student_list)
+
+
+print("\n学生信息")
+print(student_list)
+
 
 while True:
 
@@ -21,13 +29,44 @@ while True:
         for s in students:
 
             print(
-                s["name"]
-                s["age"]
+                s["name"],
+                s["age"],
                 s["score"]
             )
     elif choice == "2":
 
-        pass
+        name = input("请输入学生姓名: ")
+
+        try:
+            age = int(input("请输入学生年龄: "))
+
+        except ValueError:
+            print("年龄必须是数字")
+            continue
+
+
+        try:
+            score = int(input("请输入学生成绩: "))
+
+            if score < 0 or score > 100:
+
+                print("成绩范围错误")
+                continue
+
+        except ValueError:
+            print("成绩必须是数字")
+            continue
+
+
+        student = {
+            "name": name,
+            "age": age,
+            "score": score
+        }
+
+        students.append(student)
+
+        print("添加学生成功")
 
     elif choice == "3":
 
