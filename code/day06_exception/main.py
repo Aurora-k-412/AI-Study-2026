@@ -1,83 +1,77 @@
-import students
+from file_utils import read_file
+
+from students import (
+    load_students,
+    show_students,
+    average_score,
+    add_student
+)
 
 
-student_list = students.input_student()
+
+# 读取文件
+
+lines = read_file("students.txt")
 
 
-students.show_students(student_list)
+if lines is not None:
 
+    students = load_students(lines)
 
-print("\n学生信息")
-print(student_list)
+else:
+
+    students = []
+
 
 
 while True:
 
-    print("""
-        ======学生管理系统======
 
-        1.查看学生
-        2.添加学生
-        3.平均成绩
-        4.退出
-    """)
+    print("\n=====学生管理系统=====")
 
-    choice = input("请输入选项: ")
+    print("1. 查看学生")
+
+    print("2. 平均成绩")
+
+    print("3. 添加学生")
+
+    print("4. 退出")
+
+
+    choice = input("请选择:")
+
+
 
     if choice == "1":
 
-        for s in students:
+        show_students(students)
 
-            print(
-                s["name"],
-                s["age"],
-                s["score"]
-            )
+
+
     elif choice == "2":
 
-        name = input("请输入学生姓名: ")
+        avg = average_score(students)
 
-        try:
-            age = int(input("请输入学生年龄: "))
-
-        except ValueError:
-            print("年龄必须是数字")
-            continue
+        print(
+            f"平均成绩:{avg}"
+        )
 
 
-        try:
-            score = int(input("请输入学生成绩: "))
-
-            if score < 0 or score > 100:
-
-                print("成绩范围错误")
-                continue
-
-        except ValueError:
-            print("成绩必须是数字")
-            continue
-
-
-        student = {
-            "name": name,
-            "age": age,
-            "score": score
-        }
-
-        students.append(student)
-
-        print("添加学生成功")
 
     elif choice == "3":
 
-        total_score = 0
+        add_student(students)
 
-        for s in students:
 
-            total_score += s["score"]
-
-        print("平均成绩为: ", total_score / len(students))
 
     elif choice == "4":
 
+        print("系统退出")
+
         break
+
+
+
+    else:
+
+        print("输入错误，请重新选择")

@@ -1,27 +1,33 @@
 students = []
 
-def load_students():
+def load_students(lines):
 
-    try:
-        with open("students.txt", "r") as f:
+    students = []
 
-            lines = f.readlines()
 
-            for line in lines:
-                data = line.strip().split(",")
+    for line in lines:
 
-                student = {
-                    "name": data[0],
-                    "age": int(data[1]),
-                    "score": int(data[2])
-                }
+        try:
 
-                students.append(student)
-    except FileNotFoundError:
-        print("学生文件不存在")
+            data = line.strip().split(",")
+
+
+            student = {
+                "name": data[0],
+                "age": int(data[1]),
+                "score": int(data[2])
+            }
+
+
+            students.append(student)
+
+
+        except ValueError:
+
+            print("成绩格式错误")
+
 
     return students
-
 
 # Day06 练习3 学生信息输入校验
 
@@ -83,3 +89,16 @@ def show_students(students):
 def average_score():
 
     pass
+
+
+def average_score(students):
+
+    total = 0
+
+
+    for student in students:
+
+        total += student["score"]
+
+
+    return total / len(students)
