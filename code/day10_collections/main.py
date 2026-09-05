@@ -48,4 +48,3 @@ print(queue)
 queue.pop()         #删右边
 queue.popleft()     #删左边
 print(queue)
-
