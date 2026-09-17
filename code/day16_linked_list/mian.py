@@ -1,8 +1,6 @@
-#节点类
-class ListNode:
-    def __init__(self, val):
-        self.val = val
-        self.next = None
+from list_node import ListNode
+from operations import delete_value
+from operations import reverse_list
 
 #创建节点
 node_a = ListNode(10)
@@ -33,6 +31,9 @@ while current_node:
     print(current_node.val)
     current_node = current_node.next
 
+print()
+
+
 new_tail = ListNode(40)
 
 tail_node = head_node
@@ -47,3 +48,59 @@ current_node_2 = head_node
 while current_node_2:
     print(current_node_2.val)
     current_node_2 = current_node_2.next
+
+
+#删除20
+delete_current = head_node
+
+while delete_current.next:
+    if delete_current.next.val == 20:
+        print("找到了")
+        delete_current.next = delete_current.next.next
+        break
+
+    delete_current = delete_current.next
+
+
+check_after_delete = head_node
+
+while check_after_delete:
+    print(check_after_delete.val)
+    check_after_delete = check_after_delete.next
+
+print()
+
+
+
+#测试删除节点5
+head_node = delete_value(head_node, 5)
+#删除中间节点 30
+head_node = delete_value(head_node, 30)
+
+check_delete_middle = head_node
+
+while check_delete_middle:
+    print(check_delete_middle.val)
+    check_delete_middle = check_delete_middle.next
+
+print()
+
+
+reverse_a = ListNode(10)
+reverse_b = ListNode(20)
+reverse_c = ListNode(30)
+reverse_d = ListNode(40)
+
+reverse_a.next = reverse_b
+reverse_b.next = reverse_c
+reverse_c.next = reverse_d
+
+reverse_head = reverse_a
+
+reverse_head = reverse_list(reverse_head)
+
+check_reverse_clean = reverse_head
+
+while check_reverse_clean:
+    print(check_reverse_clean.val)
+    check_reverse_clean = check_reverse_clean.next
