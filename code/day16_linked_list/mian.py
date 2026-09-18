@@ -1,6 +1,7 @@
 from list_node import ListNode
 from operations import delete_value
 from operations import reverse_list
+from operations import has_cycle
 
 #创建节点
 node_a = ListNode(10)
@@ -104,3 +105,32 @@ check_reverse_clean = reverse_head
 while check_reverse_clean:
     print(check_reverse_clean.val)
     check_reverse_clean = check_reverse_clean.next
+
+print()
+
+#构建有环链表
+cycle_a = ListNode(10)
+cycle_b = ListNode(20)
+cycle_c = ListNode(30)
+cycle_d = ListNode(40)
+
+cycle_a.next = cycle_b
+cycle_b.next = cycle_c
+cycle_c.next = cycle_d
+
+cycle_d.next = cycle_b
+
+print(has_cycle(cycle_a))
+print()
+
+
+normal_a = ListNode(10)
+normal_b = ListNode(20)
+normal_c = ListNode(30)
+normal_d = ListNode(40)
+
+normal_a.next = normal_b
+normal_b.next = normal_c
+normal_c.next = normal_d
+
+print(has_cycle(normal_a))
